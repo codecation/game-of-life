@@ -20,3 +20,9 @@
     (filter (partial should-live? living-cells))
     (map first)
     set))
+
+(defn start []
+  (let [canvas (.getElementById js/document "canvas")
+        context (.getContext canvas "2d")]
+    (set! (.-fillStyle context) "rgb(0, 0, 0)")
+    (.fillRect context 10 10 10 10)))
