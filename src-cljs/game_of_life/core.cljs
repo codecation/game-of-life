@@ -42,4 +42,3 @@
 
 (defn start []
   (run glider))
-
