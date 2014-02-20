@@ -5,10 +5,16 @@
 (def board-size (* cell-size 50))
 (def glider #{[1 1] [1 3] [2 3] [2 2] [3 2]})
 
+(defn- clear-board [context]
+  (.clearRect context 0 0 board-size board-size))
+
+(defn- draw-cell [x y context]
+  (.fillRect context (* cell-size x) (* cell-size y) cell-size cell-size))
+
 (defn- draw [living-cells context]
-  (.clearRect context 0 0 board-size board-size)
+  (clear-board context)
   (doseq [[x y] living-cells]
-    (.fillRect context (* cell-size x) (* cell-size y) cell-size cell-size)))
+    (draw-cell x y context)))
 
 (defn- run [board context]
   (draw board context)
