@@ -1,14 +1,23 @@
 # game-of-life
 
-A Clojure library designed to ... well, that part is up to you.
+Yet another Game of Life implementation. This time in Clojurescript.
 
 ## Usage
 
-FIXME
+### To run
+
+1. Compile the project by running `lein cljsbuild once`.
+2. When compilation completes, visit `src/main.html' in your browser.
+3. Watch the glider fly across the board.
+
+### To open a REPL
+
+1. Run `lein repl` in the project's directory.
+2. Run `(cemerick.austin.repls/exec)` at the REPL prompt.
+3. Visit the URL printed after "Browser-REPL ready @..."
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the MIT license (see LICENSE for details).
