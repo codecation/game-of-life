@@ -5,19 +5,22 @@
 (def board-size (* cell-size 50))
 (def glider #{[1 1] [1 3] [2 3] [2 2] [3 2]})
 
-(defn draw [living-cells]
+(defn- draw [living-cells context]
+  (.clearRect context 0 0 board-size board-size)
+  (doseq [[x y] living-cells]
+    (.fillRect context (* cell-size x) (* cell-size y) cell-size cell-size)))
+
+(defn- run [board context]
+  (draw board context)
+  (js/setTimeout (fn [] (run (game/advance board) context)) 100))
+
+(defn- make-context []
   (let [canvas (.getElementById js/document "canvas")
         context (.getContext canvas "2d")]
     (set! (.-width canvas) board-size)
     (set! (.-height canvas) board-size)
     (set! (.-fillStyle context) "rgb(0, 0, 0)")
-    (.clearRect context 0 0 board-size board-size)
-    (doseq [[x y] living-cells]
-      (.fillRect context (* cell-size x) (* cell-size y) cell-size cell-size))))
-
-(defn run [board]
-  (draw board)
-  (js/setTimeout (fn [] (run (game/advance board))) 100))
+    context))
 
 (defn start []
-  (run glider))
+  (run glider (make-context)))
