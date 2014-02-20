@@ -6,11 +6,6 @@
           :when (not= 0 dx dy)]
       [(+ dx x) (+ dy y)])))
 
-;; collect all neighbors of live cells
-;; count their frequencies
-;; if frequency == 2 then add to living set ONLY if alive
-;; if frequency == 3 then add to living set
-;;
 (defn should-live?
   [living-cells [location occurrence-count]]
   (or (= occurrence-count 3)
@@ -18,7 +13,10 @@
            (contains? living-cells location))))
 
 (defn advance [living-cells]
-  (set
-    (map first
-      (filter (partial should-live? living-cells)
-              (frequencies (mapcat neighbors living-cells))))))
+  (->>
+    living-cells
+    (mapcat neighbors)
+    (frequencies)
+    (filter (partial should-live? living-cells))
+    (map first)
+    set))
