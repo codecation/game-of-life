@@ -10,7 +10,7 @@
   [living-cells [location occurrence-count]]
   (or (= occurrence-count 3)
       (and (= occurrence-count 2)
-           (contains? living-cells location))))
+           (living-cells location))))
 
 (defn advance [living-cells]
   (->>
