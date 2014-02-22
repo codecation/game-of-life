@@ -2,6 +2,8 @@
 
 This is a Game of Life implementation. There are many like it, but this one's in ClojureScript.
 
+See it running at [http://costa-rica.github.io/game-of-life/](http://costa-rica.github.io/game-of-life/).
+
 ## Usage
 
 ### To run
