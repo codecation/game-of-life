@@ -6,7 +6,7 @@
 (def board-size-in-pixels (* cell-size-in-pixels board-width-in-cells))
 
 (def current-run-id (atom 0))
-(def board-update-delay 100)
+(def board-update-delay 70)
 
 (def glider #{[1 1] [1 3] [2 3] [2 2] [3 2]})
 
@@ -39,8 +39,8 @@
 (defn random-cells []
   "Returns a set of randomly-chosen cells within the board dimensions"
   (let [number-of-cells (* 0.2 board-width-in-cells board-width-in-cells)
-        random-cell-generator (fn [] (repeatedly 2 (fn [] (rand-int board-width-in-cells))))]
-    (into #{} (repeatedly number-of-cells random-cell-generator))))
+        random-location-fn (fn [] (repeatedly 2 #(rand-int board-width-in-cells)))]
+    (set (repeatedly number-of-cells random-location-fn))))
 
 (defn start [living-cells]
   "Start the simulation"
