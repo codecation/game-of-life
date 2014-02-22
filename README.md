@@ -1,6 +1,6 @@
 # game-of-life
 
-Yet another Game of Life implementation. This time in Clojurescript.
+This is a Game of Life implementation. There are many like it, but this one's in ClojureScript.
 
 ## Usage
 
