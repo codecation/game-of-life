@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <title>Game of Life</title>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="container">
+    <h1>Yet another game of life.</h1>
+
+    <canvas id='canvas'></canvas>
+
+    <div class='buttons'>
+      <a href='#'
+         title='Random'
+         onclick='game_of_life.draw.start_random()'>
+        <img class='thumbnail' src='images/random.png'>
+      </a>
+
+      <a href='#'
+         title='Glider'
+         onclick='game_of_life.draw.start_glider()'>
+        <img class='thumbnail' src='images/glider.png'>
+      </a>
+    </div>
+
+    <script src="../target/main.js"></script>
+    <script>
+      game_of_life.draw.start_random();
+    </script>
+  </div>
+</body>
+</html>
