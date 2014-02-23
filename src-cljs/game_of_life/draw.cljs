@@ -7,6 +7,7 @@
 
 (def current-run-id (atom 0))
 (def board-update-delay 70)
+(def random-density 0.15)
 
 (def glider #{[1 1] [1 3] [2 3] [2 2] [3 2]})
 
@@ -38,7 +39,7 @@
 
 (defn random-cells []
   "Returns a set of randomly-chosen cells within the board dimensions"
-  (let [number-of-cells (* 0.2 board-width-in-cells board-width-in-cells)
+  (let [number-of-cells (* random-density board-width-in-cells board-width-in-cells)
         random-location-fn (fn [] (repeatedly 2 #(rand-int board-width-in-cells)))]
     (set (repeatedly number-of-cells random-location-fn))))
 
