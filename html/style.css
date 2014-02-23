@@ -1,35 +1,30 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
-h1, h2 {
+#game-of-life h1, #game-of-life h2 {
   text-align: center;
   padding-bottom: 15px;
 }
 
-#canvas {
+#game-of-life canvas {
   border: 2px solid #ddd;
 }
 
-#container {
+#game-of-life {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   width: 500px;
 }
 
-a {
+#game-of-life a {
   text-decoration: none;
 }
 
-.thumbnail {
+#game-of-life .thumbnail {
   margin: 0;
   width: 50px;
   height: 50px;
   border: 2px solid #ddd;
 }
 
-.thumbnail:hover {
+#game-of-life .thumbnail:hover {
   border: 2px solid #000;
 }
