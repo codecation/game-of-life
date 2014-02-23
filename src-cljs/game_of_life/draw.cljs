@@ -12,7 +12,7 @@
 
 (defn- make-context []
   "Creates the native js context object"
-  (let [canvas (.getElementById js/document "canvas")
+  (let [canvas (.getElementById js/document "game-of-life-canvas")
         context (.getContext canvas "2d")]
     (set! (.-width canvas) board-size-in-pixels)
     (set! (.-height canvas) board-size-in-pixels)
