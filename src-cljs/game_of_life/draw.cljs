@@ -48,10 +48,10 @@
   (swap! current-run-id inc)
   (run living-cells (make-context) (deref current-run-id)))
 
-(defn start-glider []
+(defn ^:export start-glider []
   "Starts simulation with a glider placed in the board"
   (start glider))
 
-(defn start-random []
+(defn ^:export start-random []
   "Starts simulation with a randomly generated set of live cells"
   (start (random-cells)))
