@@ -1,25 +1,35 @@
-# game-of-life
+# Game of Life
 
-This is a Game of Life implementation. There are many like it, but this one's in ClojureScript.
+Very realistic life simulation. See it running live at
+[clojure-rica.github.io](http://clojure-rica.github.io).
 
-See it running at [http://costa-rica.github.io/game-of-life/](http://costa-rica.github.io/game-of-life/).
+![](images/example-life.gif)
 
 ## Usage
 
-### To run
+Grab the code:
 
-1. Compile the project by running `lein cljsbuild once`.
-2. When compilation completes, visit `src/main.html' in your browser.
-3. Watch the glider fly across the board.
+```bash
+$ git clone https://github.com/clojure-rica/game-of-life.git
+$ cd game-of-life
+```
 
-### To open a REPL
+Compile it:
 
-1. Run `lein repl` in the project's directory.
-2. Run `(cemerick.austin.repls/exec)` at the REPL prompt.
-3. Visit the URL printed after "Browser-REPL ready @..."
+```bash
+$ lein cljsbuild once
+```
+
+And take a peek:
+
+```bash
+$ open site/index.html
+```
+
+## Contributing
+Please see the [Contributing
+Document](https://github.com/clojure-rica/game-of-life/blob/master/CONTRIBUTING.md)
 
 ## License
-
-Copyright © 2014
-
-Distributed under the MIT license (see LICENSE for details).
+Copyright (C) 2014 Ben Orenstein, Chris Hunt, [MIT
+License](https://github.com/clojure-rica/game-of-life/blob/master/LICENSE.txt)
