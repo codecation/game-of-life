@@ -1,7 +1,7 @@
 # Game of Life
 
 Very realistic life simulation. See it running live at
-[clojure-rica.github.io](http://clojure-rica.github.io).
+[codecation.github.io](http://codecation.github.io/2014-02-clojure-rica).
 
 ![](images/example-life.gif)
 
@@ -10,7 +10,7 @@ Very realistic life simulation. See it running live at
 Grab the code:
 
 ```bash
-$ git clone https://github.com/clojure-rica/game-of-life.git
+$ git clone https://github.com/codecation/game-of-life.git
 $ cd game-of-life
 ```
 
@@ -28,8 +28,8 @@ $ open site/index.html
 
 ## Contributing
 Please see the [Contributing
-Document](https://github.com/clojure-rica/game-of-life/blob/master/CONTRIBUTING.md)
+Document](https://github.com/codecation/game-of-life/blob/master/CONTRIBUTING.md)
 
 ## License
 Copyright (C) 2014 Ben Orenstein, Chris Hunt, [MIT
-License](https://github.com/clojure-rica/game-of-life/blob/master/LICENSE.txt)
+License](https://github.com/codecation/game-of-life/blob/master/LICENSE.txt)
