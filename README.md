@@ -1,5 +1,7 @@
 # Game of Life
 
+[![Build Status](https://travis-ci.org/codecation/game-of-life.svg?branch=master)](https://travis-ci.org/codecation/game-of-life)
+
 Very realistic life simulation. See it running live at
 [codecation.github.io](http://codecation.github.io/2014-02-clojure-rica).
 
